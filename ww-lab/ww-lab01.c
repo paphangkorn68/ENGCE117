@@ -4,7 +4,6 @@ int main() {
 
     int N , i ;                               
 
-    printf( "enter number\n" ) ;            //แสดงenter number
     if ( scanf( "%d", &N ) != 1 ) {             //เช็ค n เป็นตัวเลขหรือไม่
         printf( "error" ) ;
         return 1 ;
@@ -19,3 +18,4 @@ int main() {
 
     return 0 ;
 }                                           //จบเมน
+
