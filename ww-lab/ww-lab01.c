@@ -5,11 +5,15 @@ int main() {
     int N, i;                               
 
     printf( "enter number\n" ) ;            //แสดงenter number
-    if (scanf("%d", &N) != 0) {             //เช็ค n เป็นตัวเลขหรือไม่
+    if (scanf("%d", &N) != 1 ) {             //เช็ค n เป็นตัวเลขหรือไม่
+        printf( "error" ) ;
+    }else if ( N <= 0 ) {
+        printf( "error" ) ;
+    } else{
         for( i = 0 ; i < N ; i++ ) {        //loobสำหลับแสดง hello loob ตามจำนวน n ที่ใส่เข้าไป
             printf( "hello loob\n" ) ;
         }                                   //จบfor
-        return 1 ;
+        
     }                                       //จบif
 
     return 0;
