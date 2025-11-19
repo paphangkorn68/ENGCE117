@@ -7,6 +7,7 @@ int main() {
     printf( "enter number\n" ) ;            //แสดงenter number
     if (scanf("%d", &N) != 1 ) {             //เช็ค n เป็นตัวเลขหรือไม่
         printf( "error" ) ;
+        return 1 ;
     }else if ( N <= 0 ) {
         printf( "error" ) ;
     } else{
