@@ -2,9 +2,8 @@
 
 int main() {
 
-    int num1 , num2 , operationCode ;
-    int result = 0 ;
-    printf( " %d " , result ) ;
+    int num1 , num2 , operationCode , result ;
+
     if ( scanf( "%d %d %d" , &num1 , &num2 , &operationCode ) != 3 ) {
         return 1 ;
     }
@@ -29,6 +28,6 @@ int main() {
         printf( "Invalid Operation" ) ;
         break ;
     }
-    
+
     return 0 ;
 }
