@@ -1,4 +1,3 @@
-// Pre-code (โค้ดบังคับ)
 #include <stdio.h>
 
 int main() {
@@ -7,13 +6,11 @@ int main() {
     float totalBill = 0.0;
     float vatAmount = 0.0;
     
-    // รับค่าราคาก่อน VAT และรหัสหมวดหมู่
-    if (scanf("%f %d", &price_before_vat, &categoryCode) != 2) {
-        return 1; // Handle input failure
+    printf( "enter number\n" ) ;
+    while ( scanf("%f %d", &price_before_vat, &categoryCode) != 2 ) {
+        printf( "Error enter number only \n" ) ;
+        while(getchar() != '\n') ;
     }
-    
-    // TODO: Implement the switch statement based on categoryCode, 
-    // and perform the necessary float calculations inside each case.
 
     switch (categoryCode) {
     case 1 :
