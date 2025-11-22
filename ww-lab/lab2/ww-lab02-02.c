@@ -6,10 +6,11 @@ int main() {
     float unitPrice, itemCost, grandTotal = 0.0;
     
     // รับค่า N (จำนวนรายการ)
-    if (scanf("%d", &N) != 1) {
-        return 1;
+    printf( "enter number\n" ) ;
+    while ( scanf("%d", &N) != 1 ) {
+        printf( "enter number only \n" ) ;
+        while(getchar() != '\n') ;
     }
-    
     // TODO: Implement the for loop (N times)
     // TODO: Inside the loop, receive unitPrice and quantity
     // TODO: Implement the if-else discount logic and accumulate grandTotal
