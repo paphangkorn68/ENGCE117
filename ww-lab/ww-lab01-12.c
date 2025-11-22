@@ -8,10 +8,11 @@ int main() {
     float totalBill = 0.0 ;
     
     // รับค่ารหัสแพ็กเกจและปริมาณการใช้ข้อมูล
-    if (scanf("%d %f", &planCode, &dataUsage_GB) != 2) {
-        return 1; // Handle input failure
+    printf( "enter number\n" ) ;
+    while ( scanf("%d %f", &planCode, &dataUsage_GB) != 2 ) {
+        printf( "Error enter number only \n" ) ;
+        while(getchar() != '\n') ;
     }
-    
     // TODO: Implement the switch statement based on planCode, 
     // and the nested if-else logic to apply the correct formula.
     switch ( planCode ) {
