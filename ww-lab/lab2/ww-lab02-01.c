@@ -4,10 +4,10 @@
 int main() {
     int N, i;
     
-    // รับค่า N (จำนวนรอบ)
-    if (scanf("%d", &N) != 1 || N <= 0 ) {
-        printf( "Error" ) ;
-        return 1; // Handle input failure
+    printf( "enter number\n" ) ;
+    while ( scanf("%d", &N) != 1 || N <= 0 ) {
+        printf( "Error enter number only \n" ) ;
+        while(getchar() != '\n') ;
     }
     for ( i = 0 ; i < N ; i++ ) {
         printf( "Hello Loop!\n" ) ; 
