@@ -7,10 +7,11 @@ int main() {
     float totalInterest = 0.0;
     
     // รับค่ารหัสระยะเวลาและจำนวนเงินลงทุน
-    if (scanf("%d %f", &termCode, &investmentAmount) != 2) {
-        return 1; // Handle input failure
+    printf( "enter time&monny\n" ) ;
+    while ( scanf( "%d %f", &termCode, &investmentAmount ) != 2 ) {
+        printf( "enter time&monny only \n" ) ;
+        while(getchar() != '\n') ;
     }
-    
     // TODO: Implement the switch statement based on termCode, 
     // and the nested if-else logic to determine the aprRate.
     switch ( termCode ) {
