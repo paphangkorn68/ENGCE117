@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int N, i;
+    
+    printf( "enter number\n" ) ;
+    while ( scanf("%d", &N) != 1 || N <= 0 ) {
+        printf( "Error enter number only \n" ) ;
+        while(getchar() != '\n') ;
+    }
+    for ( i = 0 ; i < N ; i++ ) {
+        printf( "[%d]Hello Loop!\n" , i ) ; 
+    }
+
+    return 0;
+}
