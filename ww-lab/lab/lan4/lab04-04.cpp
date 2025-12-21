@@ -11,7 +11,6 @@ struct studennode {
 
 void savenode( struct studennode *child , char n[] , int a , char s , float g ) ;
 void gonext1( struct studennode **walk ) ;
-void gonext2( struct studennode *walk ) ;
 
 int main() {
 
@@ -33,10 +32,9 @@ int main() {
 
     now1 = start ;
     now2 = &start ;
+
+    gonext1( &now1 ) ;
     
-    printf( "%s\n" , (*now2)->name ) ;
-    gonext1( now2 ) ;
-    printf( "%s\n" , (*now2)->name ) ;
     return 0 ;
 }
 
@@ -55,10 +53,3 @@ void gonext1( struct studennode **walk ) {
     
 }
 
-void gonext2( struct studennode *walk ) {
-    for( int i = 0 ; i < 4 ; i ++ ) {
-        printf( "%s\n" , (walk)->name ) ;
-        walk = (walk)->next ;
-    }
-    
-}
