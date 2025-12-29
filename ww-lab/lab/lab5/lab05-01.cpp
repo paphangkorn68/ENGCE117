@@ -11,8 +11,8 @@ struct studennode {
 
 struct studennode *addnode(struct studennode **walk, char n[], int a, char s, float g);
 void showall(struct studennode *walk);
-void insnode(struct studennode *walk, char after[], char n[], int a, char s, float g);
-void delnode(struct studennode *walk, char target[]);
+void insnode(struct studennode *walk , char n[], int a, char s, float g);
+void delnode(struct studennode *walk );
 
 int main() {
     struct studennode *start = NULL, *now;
@@ -23,13 +23,13 @@ int main() {
     now = addnode(&start, "two", 8, 'F', 3.22);
     showall(start);
 
-    insnode(start, "two", "three", 10, 'M', 3.33);
+    insnode(now , "three", 10, 'M', 3.33);
     showall(start);
     
-    insnode(start, "two", "four", 12, 'M', 3.44);
+    insnode(now , "four", 12, 'M', 3.44);
     showall(start);
 
-    delnode(start, "four");
+    delnode( now );
     showall(start);
 
     return 0;
@@ -58,9 +58,9 @@ struct studennode *addnode(struct studennode **walk, char n[], int a, char s, fl
     return *walk;
 }
 
-void insnode(struct studennode *walk, char after[], char n[], int a, char s, float g) {
+void insnode(struct studennode *walk, char n[], int a, char s, float g) {
     while (walk != NULL) {
-        if (strcmp((walk)->name, after) == 0) {
+        if (strcmp((walk)->name, "two" ) == 0) {
             struct studennode *newnode = new struct studennode ;
             strcpy(newnode->name, n);
             newnode->age = a;
@@ -74,12 +74,12 @@ void insnode(struct studennode *walk, char after[], char n[], int a, char s, flo
     }
 }
 
-void delnode(struct studennode *walk, char target[]) {
+void delnode( struct studennode *walk ) {
     struct studennode *prev = NULL;
     struct studennode *temp = walk;
 
     while (temp != NULL) {
-        if (strcmp(temp->name, target) == 0) {
+        if (strcmp(temp->name, "four" ) == 0) {
             if (prev == NULL) {
                 walk = temp->next;
             } else {
